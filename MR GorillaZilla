@@ -1,0 +1,67 @@
+***Demo- BUILD A MIXED REALITY GAME AND PUBLISH ON META’S APP LAB with Meta Presence Platform ( Here i am building the game - Gorilla Zilla)***
+
+SDK list-
+
+Meta SDK **Package Name:** *com.meta.xr.sdk.all (Previously known as Oculus Integration SDK)*
+
+**Package Version:** *59.0.0 (find the latest)*
+
+**(NOTE:** If the version number is left blank, Unity will install the latest version of the SDK.)
+
+(for demo game only)GorillaZilla SDK - https://drive.google.com/file/d/1MFYD0tyJ1QRd1_smz38tmhaY1RNpQ1BR/view?usp=drive_link
+
+XR Gizmos https://github.com/darktable/XRGizmos.git
+
+Toon Shader https://github.com/Delt06/urp-toon-shader.git?path=Packages/com.deltation.toon-shader
+
+Briefing Document- 
+
+[Master Companion Document.pdf](https://prod-files-secure.s3.us-west-2.amazonaws.com/6490fa62-cb48-41ee-b503-56ef62a0bcd6/1ab92a23-d680-4ec7-a64c-062971e4f5b5/Master_Companion_Document.pdf)
+
+**Step 1**: ***Project Setup***
+
+Install Unity Hub: [*https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe*](https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe)
+
+Unity Hub Unity Download Archive: [*https://unity.com/releases/editor/archive*](https://unity.com/releases/editor/archive)
+
+**How to switch from Windows build to an android build?**
+
+File> Build settings> Android ( if android is disabled- go to add modules for unity and add Android build support {OpenJDK & Android SDK & NDK Tools} )
+
+***Importing Meta SDK-*** 
+
+Window> Package Manager> Add (Top Left corner)> Add Package by name - *com.meta.xr.sdk.all> Add*
+
+Check Oculus Android settings: Project Settings>Meta XR(Or Oculus)> Complete checklist.
+
+(AS a result of the SDK, now you can see a Meta tab on your menu bar.)
+
+1)Create new scene.
+
+2)Meta>Tools>Building Blocks> Delete Main camera and add Camera Rig
+
+3) Put your Headset in Dev Mode
+
+Getting Started with Meta Quest Developer Hub https://developer.oculus.com/documentation/unity/ts-odh/
+
+Deploy Build on Headset https://developer.oculus.com/documentation/unity/ts-odh-deploy-build/
+
+*[Before you can deploy an app, your device must be set to Developer Mode.* 
+
+*When it’s time to deploy your app for testing, see Deploy Build on Headset for the steps to install the package.*
+
+*Once the application is deployed to the device, you’ll need to go under **App Library** and be sure to select ‘Unknown sources’ to find and launch your application.]*
+
+4) Build your demo scene and Import to Headset for test! 
+
+**Step 2**: **Gorilla Zilla Game Demo**
+
+Assets> Import Package> Gorilla zilla package from downloads
+
+( we need dependancies for this package- 1st Meta SDK- already installed, 2nd- XR Gizmos, 3rd- Toon Shader- Links in SDK List on the top of this page)
+
+Add these packages by going to Window> Package Manager>Add by Git URL.
+
+*Note: “Use consistent SDK versions for all SDKs*
+
+If you require passthrough, you can add them from your building blocks, if you have different states of passthrough( if your experience requires different states, aka, different colours while in passthrough, duplicate the building block “Passthrough”
